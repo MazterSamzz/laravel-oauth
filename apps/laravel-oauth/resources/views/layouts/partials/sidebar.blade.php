@@ -28,12 +28,14 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/users" class="nav-link {{ request()->is('users') ? 'active' : '' }}">
-                        <i class="nav-icon bi bi-person-circle"></i>
-                        <p>Users</p>
-                    </a>
-                </li>
+                @if (auth()->user()->role == 'admin')
+                    <li class="nav-item">
+                        <a href="/users" class="nav-link {{ request()->is('users') ? 'active' : '' }}">
+                            <i class="nav-icon bi bi-person-circle"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon bi bi-power"></i>
