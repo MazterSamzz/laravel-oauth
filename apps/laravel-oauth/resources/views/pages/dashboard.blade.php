@@ -257,7 +257,7 @@
                                                 <span class="direct-chat-timestamp float-end"> 23 Jan 2:00 pm </span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="./assets/img/user1-128x128.jpg"
+                                            <img class="direct-chat-img" src={{ asset('assets/img/user1-128x128.jpg') }}
                                                 alt="message user image" />
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -275,7 +275,7 @@
                                                 </span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="./assets/img/user3-128x128.jpg"
+                                            <img class="direct-chat-img" src={{ asset('assets/img/user3-128x128.jpg') }}
                                                 alt="message user image" />
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">You better believe it!</div>
@@ -289,7 +289,7 @@
                                                 <span class="direct-chat-timestamp float-end"> 23 Jan 5:37 pm </span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="./assets/img/user1-128x128.jpg"
+                                            <img class="direct-chat-img" src={{ asset('assets/img/user1-128x128.jpg') }}
                                                 alt="message user image" />
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">
@@ -307,7 +307,7 @@
                                                 </span>
                                             </div>
                                             <!-- /.direct-chat-infos -->
-                                            <img class="direct-chat-img" src="./assets/img/user3-128x128.jpg"
+                                            <img class="direct-chat-img" src={{ asset('assets/img/user3-128x128.jpg') }}
                                                 alt="message user image" />
                                             <!-- /.direct-chat-img -->
                                             <div class="direct-chat-text">I would love to.</div>
@@ -321,7 +321,8 @@
                                         <ul class="contacts-list">
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user1-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user1-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -338,7 +339,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user7-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user7-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -353,7 +355,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user3-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user3-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -368,7 +371,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user5-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user5-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -383,7 +387,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user6-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user6-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -398,7 +403,8 @@
                                             <!-- End Contact Item -->
                                             <li>
                                                 <a href="#">
-                                                    <img class="contacts-list-img" src="./assets/img/user8-128x128.jpg"
+                                                    <img class="contacts-list-img"
+                                                        src={{ asset('assets/img/user8-128x128.jpg') }}
                                                         alt="User Avatar" />
                                                     <div class="contacts-list-info">
                                                         <span class="contacts-list-name">
@@ -453,8 +459,8 @@
                                 <div class="card-body p-0">
                                     <div class="row text-center m-1">
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user1-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user1-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Alexander Pierce
@@ -462,8 +468,8 @@
                                             <div class="fs-8">Today</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user1-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user1-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Norman
@@ -471,8 +477,8 @@
                                             <div class="fs-8">Yesterday</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user7-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user7-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Jane
@@ -480,8 +486,8 @@
                                             <div class="fs-8">12 Jan</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user6-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user6-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 John
@@ -489,8 +495,8 @@
                                             <div class="fs-8">12 Jan</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user2-160x160.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user2-160x160.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Alexander
@@ -498,8 +504,8 @@
                                             <div class="fs-8">13 Jan</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user5-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user5-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Sarah
@@ -507,8 +513,8 @@
                                             <div class="fs-8">14 Jan</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user4-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user4-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Nora
@@ -516,8 +522,8 @@
                                             <div class="fs-8">15 Jan</div>
                                         </div>
                                         <div class="col-3 p-2">
-                                            <img class="img-fluid rounded-circle" src="./assets/img/user3-128x128.jpg"
-                                                alt="User Image" />
+                                            <img class="img-fluid rounded-circle"
+                                                src={{ asset('assets/img/user3-128x128.jpg') }} alt="User Image" />
                                             <a class="btn fw-bold fs-7 text-secondary text-truncate w-100 p-0"
                                                 href="#">
                                                 Nadia
@@ -777,7 +783,7 @@
                             <div class="px-2">
                                 <div class="d-flex border-top py-2 px-1">
                                     <div class="col-2">
-                                        <img src="./assets/img/default-150x150.png" alt="Product Image"
+                                        <img src={{ asset('assets/img/default-150x150.png') }} alt="Product Image"
                                             class="img-size-50" />
                                     </div>
                                     <div class="col-10">
@@ -791,7 +797,7 @@
                                 <!-- /.item -->
                                 <div class="d-flex border-top py-2 px-1">
                                     <div class="col-2">
-                                        <img src="./assets/img/default-150x150.png" alt="Product Image"
+                                        <img src={{ asset('assets/img/default-150x150.png') }} alt="Product Image"
                                             class="img-size-50" />
                                     </div>
                                     <div class="col-10">
@@ -807,7 +813,7 @@
                                 <!-- /.item -->
                                 <div class="d-flex border-top py-2 px-1">
                                     <div class="col-2">
-                                        <img src="./assets/img/default-150x150.png" alt="Product Image"
+                                        <img src={{ asset('assets/img/default-150x150.png') }} alt="Product Image"
                                             class="img-size-50" />
                                     </div>
                                     <div class="col-10">
@@ -823,7 +829,7 @@
                                 <!-- /.item -->
                                 <div class="d-flex border-top py-2 px-1">
                                     <div class="col-2">
-                                        <img src="./assets/img/default-150x150.png" alt="Product Image"
+                                        <img src={{ asset('assets/img/default-150x150.png') }} alt="Product Image"
                                             class="img-size-50" />
                                     </div>
                                     <div class="col-10">
