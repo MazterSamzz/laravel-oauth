@@ -3,12 +3,13 @@
 <!--begin::Head-->
 
 <head>
+    @include('layouts.partials.meta')
+
     <title>{{ config('app.name') }} @hasSection('title')
             | @yield('title')
         @endif
     </title>
 
-    @include('layouts.partials.meta')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('css')
