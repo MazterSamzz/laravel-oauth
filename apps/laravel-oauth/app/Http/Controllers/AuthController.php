@@ -51,7 +51,7 @@ class AuthController extends Controller
         ]);
 
         $data['password'] = Hash::make($data['password']);
-        $data['status'] = 'active';
+        $data['status'] = 'verify';
         User::create($data);
 
         return to_route('login')->with('success', 'Registration successful, please login');
