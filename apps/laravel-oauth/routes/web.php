@@ -6,17 +6,23 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function () {
     return view('pages.dashboard');
 });
+Route::middleware('guest')->group(function () {
 
-Route::controller(AuthController::class)->name('register')->group(function () {
-    Route::get('/register', 'register');
-    Route::post('/register', 'registerPost')->name('.post');
+    Route::controller(AuthController::class)->name('register')->group(function () {
+        Route::get('/register', 'register');
+        Route::post('/register', 'registerPost')->name('.post');
+    });
+
+    Route::prefix('auth/google')->name('auth.google.')->group(function () {
+        Route::get('redirect', [AuthController::class, 'googleRedirect'])->name('redirect');
+        Route::get('callback', [AuthController::class, 'googleCallback'])->name('callback');
+    });
+
+    Route::controller(AuthController::class)->name('login')->group(function () {
+        Route::get('/login', 'login');
+        Route::post('/login', 'loginPost')->name('.post');
+    });
 });
-
-Route::controller(AuthController::class)->name('login')->group(function () {
-    Route::get('/login', 'login');
-    Route::post('/login', 'loginPost')->name('.post');
-});
-
 Route::middleware('auth')->group(function () {
 
     Route::middleware('check_status')->group(function () {

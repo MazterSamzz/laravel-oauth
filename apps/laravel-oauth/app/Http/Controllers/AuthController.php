@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -31,9 +32,12 @@ class AuthController extends Controller
         return back()->with('failed', 'login failed');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
         return to_route('login');
     }
 
@@ -56,4 +60,45 @@ class AuthController extends Controller
 
         return to_route('login')->with('success', 'Registration successful, please login');
     }
+
+    public function googleRedirect()
+    {
+        /** @var \Laravel\Socialite\Two\GoogleProvider $provider */
+        $provider = Socialite::driver('google');
+
+        return $provider->with(['prompt' => 'select_account'])->redirect();
+    }
+
+    public function googleCallback(Request $request)
+    {
+        try {
+            $googleUser = Socialite::driver('google')->user();
+        } catch (\Exception $e) {
+            return to_route('login')->with('failed', 'Failed to login with Google');
+        }
+
+        $user = User::firstOrCreate(
+            ['email' => $googleUser->email],
+            [
+                'name' => $googleUser->name,
+                'status' => 'active'
+            ]
+        );
+
+        if ($user->status == 'banned') {
+            return to_route('login')->with('failed', 'Your account has been banned');
+        }
+        if ($user->status == 'verify') {
+            $user->update(['status' => 'active']);
+        }
+
+        Auth::login($user);
+        $request->session()->regenerate();
+        // After login, redirect to the intended page or dashboard based on role
+        return redirect()->intended(
+            $user->role == 'customer'
+                ? route('customer')
+                : route('dashboard')
+        );
+    } // 18:39
 }
